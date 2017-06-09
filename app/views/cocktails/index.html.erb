@@ -1,4 +1,35 @@
-<% @cocktails.each do |c| %>
-<p><%= c.name %></p>
-<% end %>
-<%= link_to "new cocktail", new_cocktail_path %>
+
+
+
+<h1 class="text-center"> Joe's Cocktail Emporium</h1>
+<div class="text-center padded">
+  <%= link_to "Create a cocktail", new_cocktail_path, class: "btn btn-primary" %>
+</div>
+
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |c| %>
+    <div class="col-xs-12 col-sm-4">
+
+      <div class="card text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://www.seriouseats.com/images/2014/11/20141104-cocktail-party-old-fashioneds-holiday-vicky-wasik-3.jpg')">
+
+       <div class="card-header" >
+       <h1> <%= link_to c.name, cocktail_path(c) %>
+       </div></h1>
+
+
+       <div class="card-body text-center">
+
+
+      </div>
+
+    </div>
+  </div>
+  <% end %>
+</div>
+</div>
+
+<p class="text-center">
+
+  <%= link_to "new cocktail", new_cocktail_path %>
+</p>

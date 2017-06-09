@@ -20,6 +20,10 @@ class CocktailsController < ApplicationController
   end
   end
 
+  def delete
+
+  end
+
   private
 
   def cocktail_params
