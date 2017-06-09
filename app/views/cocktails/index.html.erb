@@ -63,15 +63,19 @@
 
 <div class="card-wrap">
 
+        <div>
       <% if c.photo?  %>
       <div class="card text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(' <%= cl_image_path c.photo.path, height: 30, width: 40, crop: :fill; %> ') " >
       </div>
+
       <% else %>
       <div class="card text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://www.seriouseats.com/images/2014/11/20141104-cocktail-party-old-fashioneds-holiday-vicky-wasik-3.jpg')"></div>
+       <h1> <%= link_to c.name, cocktail_path(c) %> </h1>
         <% end %>
+        </div>
 
         <div class="card-header" >
-         <h1> <%= link_to c.name, cocktail_path(c) %> </h1>
+
          <div class="card-body text-center"></div>
        </div>
 </div>
